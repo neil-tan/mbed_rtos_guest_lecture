@@ -1,9 +1,4 @@
 #include "mbed.h"
-#include "examples.hpp"
-
-
-#include "mbed.h"
-#include "examples.hpp"
 
 DigitalOut led(LED1);
 Thread thread;
