@@ -5,16 +5,20 @@
 #include "mbed.h"
 #include "examples.hpp"
 
-DigitalOut led1(LED1);
- 
+DigitalOut led(LED1);
+Thread thread;
+
 void led_loop() {
-        led1 = !led1;
+    while (true) {
+        led = !led;
         wait(0.1);
+    }
 }
  
 int main() {
+    thread.start(led_loop);
+    
     while (true) {
-        led_loop();
         printf("waiting for 2 seconds\r\n");
         wait(2);
     }
