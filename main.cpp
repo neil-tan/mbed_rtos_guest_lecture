@@ -1,9 +1,5 @@
-#include "mbed.h"
-#include "examples.hpp"
-
 
 #include "mbed.h"
-#include "examples.hpp"
 
 DigitalOut led1(LED1);
  
